@@ -51,7 +51,6 @@ GET /search/provinces
 Demo:
 GET https://dot-sprint2.fly.dev/search/provinces
 ```
-```
 | Parameter | Required | Tipe Data | Keterangan |
 | --- | --- | --- | --- |
 | `id` | false | integer | id provinsi |
