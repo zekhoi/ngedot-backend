@@ -7,6 +7,11 @@ use App\Models\Province;
 
 class ProvinceController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:api');
+    }
+    
     public function search(Request $request)
     {
         $search = $request->input('id');

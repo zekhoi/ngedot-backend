@@ -7,6 +7,11 @@ use App\Models\City;
 
 class CityController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:api');
+    }
+    
     public function search()
     {
         $search = request()->input('id');

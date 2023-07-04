@@ -1,5 +1,5 @@
 # Live Demo
-[https://dot-sprint1.fly.dev/](https://dot-sprint1.fly.dev/)
+[https://dot-sprint2.fly.dev/](https://dot-sprint2.fly.dev/)
 
 # Petunjuk Instalasi
 
@@ -49,7 +49,7 @@ php artisan serve
 GET /search/provinces
 
 Demo:
-GET https://dot-sprint1.fly.dev/search/provinces
+GET https://dot-sprint2.fly.dev/search/provinces
 ```
 ```
 | Parameter | Required | Tipe Data | Keterangan |
@@ -63,7 +63,7 @@ Jika `id` tidak diisi, maka akan mengembalikan seluruh provinsi.
 GET /search/cities
 
 Demo:
-GET https://dot-sprint1.fly.dev/search/cities
+GET https://dot-sprint2.fly.dev/search/cities
 ```
 
 | Parameter| Required | Tipe Data | Keterangan |

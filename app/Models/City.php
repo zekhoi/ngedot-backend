@@ -24,4 +24,13 @@ class City extends Model
         return $this->belongsTo(Province::class);
     }
 
+    // change the property name to match the API response from RajaOngkir
+    public function toArray()
+    {
+        $toArray = parent::toArray();
+        $toArray['city_id'] = $toArray['id'];
+        $toArray['city_name'] = $toArray['name'];
+        unset($toArray['id'], $toArray['name']);
+        return $toArray;
+    }
 }
