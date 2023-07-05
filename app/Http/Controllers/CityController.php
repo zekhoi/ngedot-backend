@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\City;
+use App\Ongkir\ApiOngkir;
+use App\Ongkir\DbOngkir;
 
 class CityController extends Controller
 {
@@ -12,31 +13,23 @@ class CityController extends Controller
         $this->middleware('auth:api');
     }
     
-    public function search()
+    public function search(Request $request)
     {
-        $search = request()->input('id');
+        $source = config('ongkir.default');
 
-        if(!$search){
-            $cities = City::all();
+        $search = $request->input('id');
 
-            return response()->json([
-                'status' => 'success',
-                'data' => $cities
-            ]);
+        if($source == 'api'){
+            $ongkir = new ApiOngkir;
+        }else{
+            $ongkir = new DbOngkir;
         }
 
-        $city = City::where('id', $search)->first();
-
-        if(!$city){
-            return response()->json([
-                'status' => 'error',
-                'message' => 'City not found'
-            ], 404);
-        }
+        $cities = $ongkir->getCities($search);
 
         return response()->json([
             'status' => 'success',
-            'data' => $city
+            'data' => $cities
         ]);
     }
 }

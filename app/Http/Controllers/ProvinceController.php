@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Province;
+use App\Ongkir\ApiOngkir;
+use App\Ongkir\DbOngkir;
 
 class ProvinceController extends Controller
 {
@@ -14,29 +15,21 @@ class ProvinceController extends Controller
     
     public function search(Request $request)
     {
+        $source = config('ongkir.default');
+
         $search = $request->input('id');
 
-        if(!$search){
-            $provinces = Province::all();
-
-            return response()->json([
-                'status' => 'success',
-                'data' => $provinces
-            ]);
+        if($source == 'api'){
+            $ongkir = new ApiOngkir;
+        }else{
+            $ongkir = new DbOngkir;
         }
 
-        $province = Province::where('id', $search)->first();
-
-        if(!$province){
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Province not found'
-            ], 404);
-        }
+        $provinces = $ongkir->getProvinces($search);
 
         return response()->json([
             'status' => 'success',
-            'data' => $province
+            'data' => $provinces
         ]);
     }
 }

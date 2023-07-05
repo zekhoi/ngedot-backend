@@ -28,4 +28,24 @@ class RajaOngkirService
             $this->baseUrl . $url
         );
     }
+
+    // public function getProvinces($id)
+    // {
+    //     if($id){
+    //         $response = $this->fetch('/province?id=' . $id);
+    //     }else{
+    //         $response = $this->fetch('/province');
+    //     }
+    //     return $response['rajaongkir']['results'];
+    // }
+
+    // public function getCities($id)
+    // {
+    //     if($id){
+    //         $response = $this->fetch('/city?id=' . $id);
+    //     }else{
+    //         $response = $this->fetch('/city');
+    //     }
+    //     return $response['rajaongkir']['results'];
+    // }
 }

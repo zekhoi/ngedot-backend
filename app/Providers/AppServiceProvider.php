@@ -11,7 +11,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $default = config('ongkir.default');
+        $class = config("ongkir.$default.class");
+
+        $this->app->bind('App\Contracts\Ongkir::class', $class);
     }
 
     /**
