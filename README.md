@@ -95,9 +95,16 @@ GET /search/provinces
 Demo:
 GET https://dot-sprint2.zekhoi.dev/search/provinces
 ```
+| Header | Required | Tipe Data | Keterangan |
+| --- | --- | --- | --- |
+| `Authorization` | true | string | Bearer token |
+
+Login untuk mendapatkan token.
+
 | Parameter | Required | Tipe Data | Keterangan |
 | --- | --- | --- | --- |
 | `id` | false | integer | id provinsi |
+
 
 Jika `id` tidak diisi, maka akan mengembalikan seluruh provinsi.
 
@@ -108,6 +115,12 @@ GET /search/cities
 Demo:
 GET https://dot-sprint2.zekhoi.dev/search/cities
 ```
+
+| Header | Required | Tipe Data | Keterangan |
+| --- | --- | --- | --- |
+| `Authorization` | true | string | Bearer token |
+
+Login untuk mendapatkan token.
 
 | Parameter| Required | Tipe Data | Keterangan |
 | --- | --- | --- | --- |
