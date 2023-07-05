@@ -59,7 +59,7 @@ GET /search/provinces
 Demo:
 GET https://dot-sprint1.zekhoi.dev/search/provinces
 ```
-| Parameter | Required | Tipe Data | Keterangan |
+| Query | Required | Tipe Data | Keterangan |
 | --- | --- | --- | --- |
 | `id` | false | integer | id provinsi |
 
@@ -73,7 +73,7 @@ Demo:
 GET https://dot-sprint1.zekhoi.dev/search/cities
 ```
 
-| Parameter| Required | Tipe Data | Keterangan |
+| Query| Required | Tipe Data | Keterangan |
 | --- | --- | --- | --- |
 | `id` | false | integer | id provinsi |
 
