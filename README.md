@@ -32,6 +32,8 @@ Setelah mengcopy file `.env`, sesuaikan dengan konfigurasi yang akan digunakan s
 cp .env.example .env
 ```
 
+untuk `RAJAONGKIR_API_KEY` bisa menggunakan api key `0df6d5bf733214af6c6644eb8717c92c`
+
 ### Swappable Source
 ```
 RAJAONGKIR_SOURCE=api
