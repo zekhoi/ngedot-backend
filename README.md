@@ -1,5 +1,5 @@
 # Live Demo
-[https://dot-sprint2.fly.dev/](https://dot-sprint2.fly.dev/)
+[https://dot-sprint2.zekhoi.dev/](https://dot-sprint2.zekhoi.dev/)
 
 # Petunjuk Instalasi
 
@@ -13,7 +13,7 @@ Pastikan sudah menginstall:
 ### Clone Repository
 
 ```
-git clone https://github.com/zekhoi/ngedot-backend.git
+git clone https://github.com/zekhoi/ngedot-backend.git --branch sprint-2
 ```
 
 ### Install Dependencies
@@ -21,10 +21,24 @@ git clone https://github.com/zekhoi/ngedot-backend.git
 composer install
 ```
 
+### Composer Autoload
+```
+composer dump-autoload
+```
+
 ### Setup Environment
-Sesuaikan dengan konfigurasi yang akan digunakan seperti API_KEY, DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD, dan lain-lain.
+Setelah mengcopy file `.env`, sesuaikan dengan konfigurasi yang akan digunakan seperti RAJAONGKIR_API_KEY, DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD, dan lain-lain.
 ```
 cp .env.example .env
+```
+
+### Swappable Source
+```
+RAJAONGKIR_SOURCE=api
+```
+or
+```
+RAJAONGKIR_SOURCE=db
 ```
 
 ### Generate Key
@@ -43,13 +57,43 @@ php artisan serve
 ```
 
 # Petunjuk Penggunaan
+## Data dummy
+| Email | Password |
+| --- | --- |
+| `test@example.com` | `password` |
+
+### Register
+```
+POST /register
+
+Demo:
+POST https://dot-sprint2.zekhoi.dev/auth/register
+```
+
+| Parameter | Required | Tipe Data | Keterangan |
+| --- | --- | --- | --- |
+| `name` | true | string | nama |
+| `email` | true | string | email |
+| `password` | true | string | password |
+
+### Login
+```
+POST /login
+
+Demo:
+POST https://dot-sprint2.zekhoi.dev/auth/login
+```
+| Parameter | Required | Tipe Data | Keterangan |
+| --- | --- | --- | --- |
+| `email` | true | string | email |
+| `password` | true | string | password |
 
 ### Daftar Provinsi
 ```
 GET /search/provinces
 
 Demo:
-GET https://dot-sprint2.fly.dev/search/provinces
+GET https://dot-sprint2.zekhoi.dev/search/provinces
 ```
 | Parameter | Required | Tipe Data | Keterangan |
 | --- | --- | --- | --- |
@@ -62,7 +106,7 @@ Jika `id` tidak diisi, maka akan mengembalikan seluruh provinsi.
 GET /search/cities
 
 Demo:
-GET https://dot-sprint2.fly.dev/search/cities
+GET https://dot-sprint2.zekhoi.dev/search/cities
 ```
 
 | Parameter| Required | Tipe Data | Keterangan |
