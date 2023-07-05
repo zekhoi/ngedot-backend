@@ -58,6 +58,12 @@ php artisan jwt:secret
 php artisan migrate
 ```
 
+### Fetch Data
+```
+php artisan fetch:provinces
+php artisan fetch:cities
+```
+
 ### Run Server
 ```
 php artisan serve
