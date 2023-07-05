@@ -14,6 +14,11 @@ class Province extends Model
         'name',
     ];
 
+    protected $casts = [
+        'province_id' => 'string',
+        'name' => 'string',
+    ];
+
     protected $hidden = ['created_at', 'updated_at'];
 
     public function cities()
@@ -26,7 +31,7 @@ class Province extends Model
     {
         $toArray = parent::toArray();
         $toArray['province_id'] = $toArray['id'];
-        $toArray['province_name'] = $toArray['name'];
+        $toArray['province'] = $toArray['name'];
         unset($toArray['id'], $toArray['name']);
         return $toArray;
     }

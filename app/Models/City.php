@@ -17,6 +17,14 @@ class City extends Model
         'postal_code',
     ];
 
+    protected $casts = [
+        'province_id' => 'string',
+        'city_id' => 'string',
+        'name' => 'string',
+        'type' => 'string',
+        'postal_code' => 'string',
+    ];
+
     protected $hidden = ['created_at', 'updated_at'];
 
     public function province()
