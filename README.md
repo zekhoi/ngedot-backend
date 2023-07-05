@@ -43,9 +43,14 @@ or
 RAJAONGKIR_SOURCE=db
 ```
 
-### Generate Key
+### Generate App Key
 ```
 php artisan key:generate
+```
+
+### Generate JWT Secret
+```
+php artisan jwt:secret
 ```
 
 ### Migrate Database
