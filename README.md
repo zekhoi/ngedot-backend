@@ -1,5 +1,5 @@
 # Live Demo
-[https://dot-sprint1.fly.dev/](https://dot-sprint1.fly.dev/)
+[https://dot-sprint1.zekhoi.dev/](https://dot-sprint1.zekhoi.dev/)
 
 # Petunjuk Instalasi
 
@@ -22,7 +22,7 @@ composer install
 ```
 
 ### Setup Environment
-Sesuaikan dengan konfigurasi yang akan digunakan seperti API_KEY, DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD, dan lain-lain.
+Sesuaikan dengan konfigurasi yang akan digunakan seperti RAJAONGKIR_API_KEY, DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD, dan lain-lain.
 ```
 cp .env.example .env
 ```
@@ -49,7 +49,7 @@ php artisan serve
 GET /search/provinces
 
 Demo:
-GET https://dot-sprint1.fly.dev/search/provinces
+GET https://dot-sprint1.zekhoi.dev/search/provinces
 ```
 | Parameter | Required | Tipe Data | Keterangan |
 | --- | --- | --- | --- |
@@ -62,7 +62,7 @@ Jika `id` tidak diisi, maka akan mengembalikan seluruh provinsi.
 GET /search/cities
 
 Demo:
-GET https://dot-sprint1.fly.dev/search/cities
+GET https://dot-sprint1.zekhoi.dev/search/cities
 ```
 
 | Parameter| Required | Tipe Data | Keterangan |
