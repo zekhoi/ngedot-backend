@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for dot-sprint1 on 2023-07-04T23:32:08+08:00
+# fly.toml app configuration file generated for dot-sprint2 on 2023-07-05T08:19:28+08:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "dot-sprint1"
+app = "dot-sprint2"
 primary_region = "sin"
 console_command = "php /var/www/html/artisan tinker"
 
