@@ -27,6 +27,8 @@ Sesuaikan dengan konfigurasi yang akan digunakan seperti RAJAONGKIR_API_KEY, DB_
 cp .env.example .env
 ```
 
+untuk `RAJAONGKIR_API_KEY` bisa menggunakan api key `0df6d5bf733214af6c6644eb8717c92c`
+
 ### Generate Key
 ```
 php artisan key:generate
