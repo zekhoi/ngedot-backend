@@ -21,7 +21,7 @@ git clone https://github.com/zekhoi/ngedot-backend.git
 composer install
 ```
 
-### Setup Environment
+### Setup Environment Variables
 Sesuaikan dengan konfigurasi yang akan digunakan seperti RAJAONGKIR_API_KEY, DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD, dan lain-lain.
 ```
 cp .env.example .env
