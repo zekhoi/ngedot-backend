@@ -29,6 +29,7 @@ class ProvinceController extends Controller
 
         return response()->json([
             'status' => 'success',
+            'source' => $source, // add this line to see the source of the data, 'api' or 'db
             'data' => $provinces
         ]);
     }
