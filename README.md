@@ -114,7 +114,7 @@ GET https://dot-sprint2.zekhoi.dev/search/provinces
 
 Login untuk mendapatkan token.
 
-| Parameter | Required | Tipe Data | Keterangan |
+| Query | Required | Tipe Data | Keterangan |
 | --- | --- | --- | --- |
 | `id` | false | integer | id provinsi |
 
@@ -135,7 +135,7 @@ GET https://dot-sprint2.zekhoi.dev/search/cities
 
 Login untuk mendapatkan token.
 
-| Parameter| Required | Tipe Data | Keterangan |
+| Query| Required | Tipe Data | Keterangan |
 | --- | --- | --- | --- |
 | `id` | false | integer | id provinsi |
 
