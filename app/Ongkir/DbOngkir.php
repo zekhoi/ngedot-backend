@@ -11,7 +11,7 @@ class DbOngkir implements Ongkir
   public function getProvinces($id)
   {
     if($id){
-      return Province::where('id', $id)->get();
+      return Province::where('id', $id)->first();
     }else{
       return Province::all();
     }
@@ -20,7 +20,7 @@ class DbOngkir implements Ongkir
   public function getCities($id)
   {
     if($id){
-      return City::where('id', $id)->get();
+      return City::where('id', $id)->first();
     }else{
       return City::all();
     }
